@@ -18,7 +18,7 @@ protocol PhotoCollectionViewControllerDelegate:class {
 class PhotoCollectionViewController: UICollectionViewController, PHPhotoLibraryChangeObserver,PhotoCollectionViewCellDelegate,PhotoCollectionViewControllerDelegate,AlbumToolbarViewDelegate {
 	
     let imageManager = PHCachingImageManager()
-	private let toolbarHeight: CGFloat = 44.0
+    private let toolbarHeight: CGFloat = (UIScreen.main.bounds.height >= 812.0) ? 78 : 44.0
 	
 	var assetGridThumbnailSize: CGSize?
 	var fetchResult: PHFetchResult<PHObject>?

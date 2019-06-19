@@ -35,17 +35,16 @@ class AlbumToolbarView: UIView {
         self.backgroundColor = UIColor.white
         let bounds = self.bounds
         let width = bounds.width
-        let toolbarHeight = bounds.height
         let buttonWidth: CGFloat = 40
         let buttonHeight: CGFloat = 40
-        let padding:CGFloat = 5
+        let padding:CGFloat = 15
         
         // button
         self.buttonDone = UIButton(type: .custom)
-        buttonDone!.frame = CGRect(x: width - buttonWidth - padding, y:(toolbarHeight - buttonHeight) / 2, width: buttonWidth, height: buttonHeight)
+        buttonDone!.frame = CGRect(x: width - buttonWidth - padding, y: 2, width: buttonWidth, height: buttonHeight)
         buttonDone!.setTitle(PhotoPickerConfig.ButtonDone, for: .normal)
         buttonDone!.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
-        buttonDone!.setTitleColor(UIColor.black, for: .normal)
+        buttonDone!.setTitleColor(UIColor(red: 7/255, green: 179/255, blue: 20/255, alpha: 1), for: .normal)
         buttonDone!.addTarget(self, action: #selector(AlbumToolbarView.eventDoneClicked), for: .touchUpInside)
         buttonDone!.isEnabled = true
         buttonDone!.setTitleColor(UIColor.gray, for: .disabled)
@@ -53,9 +52,9 @@ class AlbumToolbarView: UIView {
         self.addSubview(self.buttonDone!)
         
         // done number
-        let labelWidth:CGFloat = 20
+        let labelWidth: CGFloat = 20
         let labelX = buttonDone!.frame.minX - labelWidth
-        let labelY = (toolbarHeight - labelWidth) / 2
+        let labelY: CGFloat = 12.0
         
         self.doneNumberContainer = UIView(frame: CGRect(x:labelX,y: labelY,width: labelWidth, height: labelWidth))
         let labelRect = CGRect(x:0, y:0, width: labelWidth, height: labelWidth)
