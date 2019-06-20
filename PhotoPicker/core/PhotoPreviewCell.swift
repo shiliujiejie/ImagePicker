@@ -9,11 +9,11 @@
 import UIKit
 import Photos
 
-public protocol PhotoPreviewCellDelegate: class{
+protocol PhotoPreviewCellDelegate: class{
     func onImageSingleTap()
 }
 
-open class PhotoPreviewCell: UICollectionViewCell, UIScrollViewDelegate {
+class PhotoPreviewCell: UICollectionViewCell, UIScrollViewDelegate {
 	
 	var model: PHAsset?
 	private var scrollView: UIScrollView?
@@ -27,7 +27,7 @@ open class PhotoPreviewCell: UICollectionViewCell, UIScrollViewDelegate {
 		self.configView()
 	}
 	
-    required public init?(coder aDecoder: NSCoder) {
+	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		self.configView()
 	}

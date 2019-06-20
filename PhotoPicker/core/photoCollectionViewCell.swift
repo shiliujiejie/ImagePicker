@@ -36,7 +36,7 @@ class photoCollectionViewCell: UICollectionViewCell {
         self.imageSelect.isHidden = !select
         
         if select {
-            self.selectButton.setImage(nil, for: .normal)
+            self.selectButton.setImage(nil, for: UIControl.State.normal)
         } else {
             self.selectButton.setImage(UIImage(named: "picture_unselect"), for: .normal)
         }

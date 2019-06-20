@@ -114,7 +114,7 @@ class PhotoPreviewToolbarView: UIView {
             var error = PhotoPickerConfig.ErrorImageMaxSelect
             error.replaceSubrange(range!, with: String(less))
             
-            let alert = UIAlertController.init(title: nil, message: error, preferredStyle: .alert)
+            let alert = UIAlertController.init(title: nil, message: error, preferredStyle: UIAlertController.Style.alert)
             let confirmAction = UIAlertAction(title: PhotoPickerConfig.ButtonConfirmTitle, style: .default, handler: nil)
             alert.addAction(confirmAction)
             self.sourceDelegate?.present(alert, animated: true, completion: nil)

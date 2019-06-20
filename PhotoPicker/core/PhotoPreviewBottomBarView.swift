@@ -88,7 +88,7 @@ class PhotoPreviewBottomBarView: UIView {
             self.doneNumberContainer?.isHidden = false
             if animation {
                 self.doneNumberAnimationLayer!.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10, options: .curveEaseIn, animations: { () -> Void in
                     self.doneNumberAnimationLayer!.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                     }, completion: nil)
             }

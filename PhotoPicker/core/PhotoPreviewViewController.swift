@@ -128,7 +128,7 @@ class PhotoPreviewViewController: UIViewController,UICollectionViewDataSource,UI
         
         self.isAnimation = true
         if self.toolbar!.frame.origin.y < 0 {
-            UIView.animate(withDuration: 0.3, delay: 0, options: [UIView.AnimationOptions.curveEaseOut], animations: { () -> Void in
+            UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: { () -> Void in
                 self.toolbar!.frame.origin = CGPoint.zero
                 var originPoint = self.bottomBar!.frame.origin
                 originPoint.y = originPoint.y - self.bottomBar!.frame.height
@@ -139,7 +139,7 @@ class PhotoPreviewViewController: UIViewController,UICollectionViewDataSource,UI
                     }
             })
         } else {
-            UIView.animate(withDuration: 0.3, delay: 0, options: [UIView.AnimationOptions.curveEaseOut], animations: { () -> Void in
+            UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: { () -> Void in
                 self.toolbar!.frame.origin = CGPoint(x:0, y: -self.toolbar!.frame.height)
                 var originPoint = self.bottomBar!.frame.origin
                 originPoint.y = originPoint.y + self.bottomBar!.frame.height

@@ -9,32 +9,32 @@
 import UIKit
 import Photos
 
-public enum PageType{
+enum PageType{
     case List
     case RecentAlbum
     case AllAlbum
 }
 
-public protocol PhotoPickerControllerDelegate: class{
+protocol PhotoPickerControllerDelegate: class{
     func onImageSelectFinished(images: [PHAsset])
 }
 
-open class PhotoPickerController: UINavigationController {
+class PhotoPickerController: UINavigationController {
     
     // the select image max number
-    public static var imageMaxSelectedNum = 4
+    static var imageMaxSelectedNum = 4
     
     // already select total
-    public static var alreadySelectedImageNum = 0
+    static var alreadySelectedImageNum = 0
     
     
-    public weak var imageSelectDelegate: PhotoPickerControllerDelegate?
+    weak var imageSelectDelegate: PhotoPickerControllerDelegate?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    public init(type: PageType) {
+    init(type:PageType){
         let rootViewController = PhotoAlbumsTableViewController(style:.plain)
         // clear cache
         PhotoImage.instance.selectedImage.removeAll()
@@ -67,7 +67,7 @@ open class PhotoPickerController: UINavigationController {
     }
    
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

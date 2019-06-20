@@ -222,7 +222,7 @@ class ViewController: UIViewController,PhotoPickerControllerDelegate, UIImagePic
         }
         picker.dismiss(animated: true, completion: nil)
     }
-    
+
     
     /**
      * 从相册中选择图片
@@ -258,7 +258,7 @@ class ViewController: UIViewController,PhotoPickerControllerDelegate, UIImagePic
         let picker = PhotoPickerController(type: PageType.RecentAlbum)
         picker.imageSelectDelegate = self
         picker.modalPresentationStyle = .popover
-        PhotoPickerController.imageMaxSelectedNum = 9 // 允许选择的最大图片张数
+        PhotoPickerController.imageMaxSelectedNum = 4 // 允许选择的最大图片张数
         let realModel = self.getModelExceptButton() // 获取已经选择过的图片
         PhotoPickerController.alreadySelectedImageNum = realModel.count
         debugPrint(realModel.count)
