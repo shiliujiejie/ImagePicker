@@ -77,6 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049BB98422D054290062787F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA139DB1C8ACCD1003AEBC4 /* PhotoAlbumsTableViewController.swift */,
+				CE019C5D1C8C05DB00DBAB3B /* PhotoPickerConfig.swift */,
+				CE019C5F1C8C127C00DBAB3B /* PhotoCollectionViewController.swift */,
+				CE019C661C8C7A1D00DBAB3B /* PhotoPickerController.swift */,
+				CEAAA63D1C8EAB950044336B /* PhotoPreviewViewController.swift */,
+				CEAAA6421C8ECE0F0044336B /* PhotoImageManager.swift */,
+				CEF3B1041C906AFC00406590 /* PhotoImage.swift */,
+				CEC69ED91C92A886008A4C4A /* PhotoFetchOptions.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		CE019C581C8BF95000DBAB3B /* albumTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,20 +172,13 @@
 		CEBCC8C11C8946B8000BD551 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				049BB98422D054290062787F /* Controllers */,
 				CEC69ED61C927C45008A4C4A /* model */,
 				CEAAA6411C8EBFFB0044336B /* PhotoPreviewCell */,
 				CEAAA6381C8E80F90044336B /* view */,
 				CE9F28421C8D54BB004F3BA2 /* extension */,
 				CE019C611C8C4FD200DBAB3B /* photoCollectionViewCell */,
 				CE019C581C8BF95000DBAB3B /* albumTableViewCell */,
-				CEA139DB1C8ACCD1003AEBC4 /* PhotoAlbumsTableViewController.swift */,
-				CE019C5D1C8C05DB00DBAB3B /* PhotoPickerConfig.swift */,
-				CE019C5F1C8C127C00DBAB3B /* PhotoCollectionViewController.swift */,
-				CE019C661C8C7A1D00DBAB3B /* PhotoPickerController.swift */,
-				CEAAA63D1C8EAB950044336B /* PhotoPreviewViewController.swift */,
-				CEAAA6421C8ECE0F0044336B /* PhotoImageManager.swift */,
-				CEF3B1041C906AFC00406590 /* PhotoImage.swift */,
-				CEC69ED91C92A886008A4C4A /* PhotoFetchOptions.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
